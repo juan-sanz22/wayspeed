@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: aqua;
+    text-align: center;
+    font-family: "Helvetica", Arial, sans-serif;
+    height: auto 0;
+}
+
+.Barreira {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+hr {
+    border-color: aqua;
+}
