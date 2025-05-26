@@ -3,12 +3,18 @@ body {
 }
 
 h1 {
-    color: aqua;
+    color: lightskyblue;
     text-align: center;
     font-family: "Helvetica", Arial, sans-serif;
     height: auto 0;
 }
 
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Helvetica", Arial, sans-serif;
+    height: auto 0;
+}
 .Barreira {
     text-align: left;
     display: flex;
@@ -16,5 +22,17 @@ h1 {
 }
 
 hr {
-    border-color: aqua;
+    border-color: white;
+}
+
+
+
+.Muralha {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.Pompeias {
+    border-color: lightskyblue;
 }
