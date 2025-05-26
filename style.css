@@ -1,15 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-}
-h1 {
-    color: #333;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-}
-h2 {
-    color: #444;
-    margin-top: 20px;
+    background-color: black;
 }
 
+h1 {
+    color: lightskyblue;
+    text-align: center;
+    font-family: "Helvetica", Arial, sans-serif;
+    height: auto 0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Helvetica", Arial, sans-serif;
+    height: auto 0;
+}
+.Barreira {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+hr {
+    border-color: white;
+}
+
+
+
+.Muralha {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.Pompeias {
+    border-color: lightskyblue;
+}
