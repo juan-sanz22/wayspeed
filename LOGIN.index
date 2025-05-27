@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<html lang="pt-br"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <title>LOGIN</title>
+</head>
+<body>
+</head>
+<body>
+    <div class="login-container">
+<body class="login-body"> <div class="login-container">
+        <div class="login-box">
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i
+                </div>
+                <h2>LOGIN</h2>
+                <form>
+                    <div class="input-gruop">
+                        <input type="text" placeholder="senha" required
+                        <i class="fa-user-icon"></i>
+            <h2>LOGIN</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Nome de usuario" required>
+                    </div>
+                    <div class="input-gruop">
+                        <imput type="password" placeholder="senha" required>
+                        <i class="fas fa-lock icon"></i>
+                    </div
+                    <div class="forgot-password"
+                <div class="input-group">
+                    <input type="password" placeholder="Senha" required>
+                    <i class="fas fa-lock icon"></i> </div>
+                <div class="forgot-password">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div class="creat-account"> <p>Não é membro?</p>
+                    <a href="#" class="creat-btn">Criar conta</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+            
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+}
+
+.login-body {
+    height: 100vh; 
+    background-color: #0a0a0a; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.login-container {
+   
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    padding: 40px 30px;
+    border-radius: 30px;
+    width: 320px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.login-box {
+    text-align: center;
+}
+
+
+
+.login-box h2 { 
+    color: white;
+    margin-bottom: 30px; 
+    font-size: 2em; 
+}
+
+.input-group {
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px; 
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    outline: none; 
+}
+
+
+.input-group input[type="password"] {
+    padding-right: 40px;
+}
+
+.icon {
+    position: absolute;
+    right: 15px;
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #00aaff;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.forgot-password a {
+    font-size: 0.9em;
+    color: white;
+    text-decoration: none; 
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none; 
+    border-radius: 30px;
+    background: #00bfff;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px; 
+    margin-bottom: 20px;
+    transition: background 0.3s ease; /
+}
+
+.login-btn:hover {
+    background: #0099e6; 
+}
+
+.creat-account {
+    text-align: center;
+}
+
+.creat-account p {
+    color: white;
+    font-size: 0.9em; 
+    display: inline; 
+    margin-right: 5px; 
+}
+
+.creat-account .creat-btn {
+    color: #00aaff; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+</style>
+</body>
+</html>
+</html>
