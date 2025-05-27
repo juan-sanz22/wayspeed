@@ -15,7 +15,7 @@ h2 {
     font-family: "Helvetica", Arial, sans-serif;
     height: auto 0;
 }
-.Barreira {
+.HorariosBarreira {
     text-align: left;
     display: flex;
     justify-content: space-around;
@@ -27,12 +27,16 @@ hr {
 
 
 
-.Muralha {
+.HorariosMuralha {
     display: flex;
     text-align: center;
     justify-content: flex-start;
 }
 
-.Pompeias {
+.HorariosBarra {
     border-color: lightskyblue;
 }
+
+
+
+
