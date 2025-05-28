@@ -1,15 +1,15 @@
-body {
+.hora-body {
     background-color: black;
 }
 
-h1 {
+.hora-h1 {
     color: lightskyblue;
     text-align: center;
     font-family: "Helvetica", Arial, sans-serif;
     height: auto 0;
 }
 
-h2 {
+.hora-h2 {
     color: white;
     text-align: center;
     font-family: "Helvetica", Arial, sans-serif;
@@ -21,7 +21,7 @@ h2 {
     justify-content: space-around;
 }
 
-hr {
+.hora-hr {
     border-color: white;
 }
 
