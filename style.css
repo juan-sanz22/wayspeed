@@ -153,3 +153,22 @@
 #body_alertas{
     background-color: #000000;
 }
+
+#horario_body{
+    width: 800px;
+    margin: 0 auto;
+    background-color: #000000;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    horario_body{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+#button_horario{
+    background-color: #000000;
+    ;
+}
