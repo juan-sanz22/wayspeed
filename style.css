@@ -1,138 +1,46 @@
-.hora-body {
+body{
+    background-color: rgb(54, 51, 51);
+}
+
+.CapaBrasao{
+    text-align: center;
+    border: 2px solid black;
+    border-color: rgb(0, 195, 255);
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
     background-color: black;
-}
-
-.hora-h1 {
-    color: lightskyblue;
-    text-align: center;
-    font-family: "Helvetica", Arial, sans-serif;
-    height: auto 0;
-}
-
-.hora-h2 {
-    color: white;
-    text-align: center;
-    font-family: "Helvetica", Arial, sans-serif;
-    height: auto 0;
-}
-.HorariosBarreira {
-    text-align: left;
-    display: flex;
-    justify-content: space-around;
-}
-
-.hora-hr {
-    border-color: white;
-}
-
-.HorariosMuralha {
-    display: flex;
-    text-align: center;
-    justify-content: flex-start;
-}
-
-.HorariosBarra {
-    border-color: lightskyblue;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    font-family: Arial, sans-serif;
-}
-
-.login-body {
-    height: 100vh; 
-    background-color: #0a0a0a; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-
-.login-container {
-   
-    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
-    padding: 40px 30px;
-    border-radius: 30px;
-    width: 320px;
+    margin-top: 100px;
+    border-radius: 5%;
     
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-.login-box {
+h1{
+    color: rgb(0, 195, 255);
     text-align: center;
+    font-family: "Mulish", sans-serif;
+    height: auto 0;
 }
 
-.login-box h2 { 
+h2{
     color: white;
-    margin-bottom: 30px; 
-    font-size: 2em; 
-}
-
-.login-input-group {
-    position: relative; 
-    margin-bottom: 20px;
-}
-
-.login-input-group input {
-    width: 100%;
-    padding: 12px 15px; 
-    border: none;
-    border-radius: 30px;
-    font-size: 1em;
-    outline: none; 
-}
-
-
-.login-input-group input[type="password"] {
-    padding-right: 40px;
-}
-
-.login-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%; 
-    transform: translateY(-50%); 
-    color: #00aaff;
-}
-
-.login-forgot-password {
-    text-align: right;
-    margin-bottom: 15px;
-}
-
-.login-forgot-password a {
-    font-size: 0.9em;
-    color: white;
-    text-decoration: none; 
-}
-
-.login-btn {
-    width: 100%;
-    padding: 12px;
-    border: none; 
-    border-radius: 30px;
-    background: #00bfff;
-    color: white;
-    font-weight: bold;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 15px; 
-    margin-bottom: 20px;
-    transition: background 0.3s ease; /
-}
-
-.login-btn:hover {
-    background: #0099e6; 
-}
-
-.login-creat-account {
     text-align: center;
+    font-family: "Mulish", sans-serif;
+    height: auto 0;
+}
+p{
+    color: black;
+    background-color:  rgb(0, 195, 255);
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    border: 2px solid black;
+    border-color: rgb(0, 195, 255);
+    border-radius: 20px;
 }
 
-.login-creat-account p {
+hr{
     color: white;
+<<<<<<< HEAD
     font-size: 0.9em; 
     display: inline; 
     margin-right: 5px; 
@@ -171,4 +79,6 @@
 #button_horario{
     background-color: #000000;
     ;
+=======
+>>>>>>> 5494f40b1ad073c150e12d4544ef82b3a554ec2a
 }
