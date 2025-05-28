@@ -64,8 +64,6 @@
     text-align: center;
 }
 
-
-
 .login-box h2 { 
     color: white;
     margin-bottom: 30px; 
@@ -147,4 +145,11 @@
     font-size: 0.9em;
 }
 
+#nmr_alertas {
+    display: flex;
+    background-color: #0a0a0a;
+}
 
+#body_alertas{
+    background-color: #000000;
+}
