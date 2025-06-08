@@ -1,45 +1,46 @@
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Rota / Horários</title>
-    <link rel="stylesheet" href="estilomapa.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>Rota / Horários</title>
+  <link rel="stylesheet" href="estilomapa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="container-app">
-        
-        <nav class="barra-navegacao">
-            <i class="fas fa-bars icone-menu"></i>
-            <span class="titulo-navegacao">Rota / Horários</span>
-            <div class="icones-navegacao">
-                <i class="fas fa-bell"></i>
-                <i class="fas fa-user-circle"></i>
-            </div>
-        </nav>
-       
-        <div class="linha-navegacao"></div>
-        
-        <div class="seletor-rota">
-            <span class="texto-rota"><b>Norte / Centro via Dona Francisca</b></span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-
-        <div class="container-mapa">
-            <img src="IMG/Mapa.PNG" alt="Mapa da rota" class="imagem-mapa">
-        </div>
-        
-        <div class="caixa-informacoes">
-            <div>
-                <span class="tempo-info">2h 24min</span>
-                <span class="chegada-info">Chegue às 2:56 PM</span>
-            </div>
-            <div class="endereco-info">
-                <b>R. Albano Schmidt Joinville</b>
-            </div>
-            <div class="distancia-info">
-                12.3 KM
-            </div>
-        </div>
+  <div class="celular">
+    <div class="topo">
+      <span class="hora">12:32</span>
+      <div class="icones-status">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
     </div>
+    <div class="cabecalho">
+      <i class="fas fa-bars icone-menu"></i>
+      <span class="titulo-cabecalho">Rota / Horarios</span>
+      <div class="cabecalho-direita">
+        <i class="fas fa-bell icone-notificacao"></i>
+        <span class="container-perfil">
+          <i class="fas fa-user icone-perfil"></i>
+        </span>
+      </div>
+    </div>
+    <div class="seletor-rota">
+      <i class="fas fa-chevron-left seta"></i>
+      <span class="texto-rota">Norte / Centro via Dona Francisca</span>
+      <i class="fas fa-chevron-right seta"></i>
+    </div>
+    <div class="mapa-container">
+      <img src="IMG/Mapa.PNG" alt="Mapa da rota" class="imagem-mapa">
+    </div>
+    <div class="informacoes-rota">
+      <div class="tempo-rota">2h 24min</div>
+      <div class="chegada">Chegue às 2:56 PM</div>
+      <div class="endereco">R. Albano Schmidt Joinville</div>
+      <div class="distancia">12.3 KM</div>
+    </div>
+  </div>
 </body>
 </html>
+     
