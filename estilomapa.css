@@ -1,171 +1,228 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #191919;
+  margin: 0;
+  background: #191a1e;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
-
-.container-app {
-    width: 329px;
-    margin: 0 auto;
-    background: #222;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+.celular {
+  width: 375px;
+  height: 700px;
+  background: #191a1e;
+  border-radius: 40px;
+  margin: 24px auto;
+  box-shadow: 0 0 26px 2px #00000099;
+  position: relative;
+  overflow: hidden;
+  border: 8px solid #111215;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.barra-navegacao {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #232c36;
-    color: #35c6f6;
-    padding: 14px 18px 10px 12px;
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 26px;
+  padding: 0 18px 0 18px;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 2px;
 }
 
+.hora {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.icones-status i {
+  margin-left: 7px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  height: 54px;
+  border-bottom: 2px solid #23242a;
+  padding: 0 18px;
+  background: transparent;
+}
 
 .icone-menu {
-    font-size: 1.5em;
-    color: #fff;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
 }
 
-
-.titulo-navegacao {
-    font-size: 1.3em;
-    font-weight: 600;
-    flex: 1;
-    text-align: center;
-    color: #35c6f6;
-    margin-left: -30px;
+.titulo-cabecalho {
+  flex: 1;
+  text-align: center;
+  color: #1ec3f7;
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: -24px;
+  letter-spacing: 0.5px;
 }
 
-
-.icones-navegacao {
-    display: flex;
-    gap: 13px;
-    color: #fff;
-    font-size: 1.2em;
+.cabecalho-direita {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.icone-notificacao {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+}
 
-.linha-navegacao {
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, #35c6f6 70%, transparent 100%);
-    margin-bottom: 0;
+.icone-notificacao::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -3px;
+  width: 7px;
+  height: 7px;
+  background: #f53b3b;
+  border-radius: 50%;
+  border: 2px solid #191a1e;
+}
+
+.container-perfil {
+  background: #1ec3f7;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-perfil {
+  color: #fff;
+  font-size: 16px;
 }
 
 
 .seletor-rota {
-    background: #111;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-size: 1em;
-    justify-content: center;
-    padding: 9px 6px 9px 6px;
-    border-bottom: 2px solid #232c36;
-    gap: 7px;
+  background: #23242a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 8px 0;
+  border-bottom: 1px solid #444;
+  gap: 8px;
 }
 
+.seta {
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+}
 
 .texto-rota {
-    color: #fff;
-    text-shadow: 0 1px 2px #222;
+  color: #fff;
+  background: #23242a;
+  font-size: 17px;
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #444;
 }
 
-.container-mapa {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    background: #e3e3e3;
+.mapa-container {
+  position: relative;
+  flex: 1;
+  min-height: 340px;
+  background: #eee;
+  overflow: hidden;
 }
 
 .imagem-mapa {
   width: 100%;
   height: 100%;
+  min-height: 340px;
   object-fit: cover;
+  display: block;
+}
+
+.destino {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.pino {
+  width: 20px;
+  height: 20px;
+  background: #f53b3b;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  margin-right: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 6px #0007;
+}
+
+.texto-destino {
+  background: #fff;
+  color: #d21c1c;
+  padding: 4px 12px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #0001;
 }
 
 
-.marcador-destino {
-    position: absolute;
-    top: 25px;
-    left: 120px;
-    display: flex;
-    align-items: flex-start;
-    z-index: 3;
+.informacoes-rota {
+  background: #23242aee;
+  padding: 12px 18px 16px 18px;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: -5px;
 }
 
-
-.ponto-marcador {
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    background: #de3c3c;
-    border: 4px solid #fff;
-    margin-right: 6px;
-    margin-top: 3px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.18);
+.tempo-rota {
+  color: #1ec3f7;
+  font-size: 29px;
+  font-weight: bold;
+  margin-bottom: 1px;
 }
 
-
-.rotulo-marcador {
-    background: rgba(255,255,255,0.93);
-    color: #3f3f3f;
-    font-size: 0.92em;
-    padding: 4px 11px 4px 8px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.10);
-    line-height: 1.2em;
+.chegada {
+  color: #1ec3f7;
+  font-size: 13px;
+  margin-bottom: 7px;
 }
 
-
-.caixa-informacoes {
-    background: rgba(30,32,40,0.93);
-    color: #fff;
-    padding: 14px 15px 10px 15px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    margin-top: -25px;
-    box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
-    font-size: 1em;
+.endereco {
+  color: #1ec3f7;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 
-
-.tempo-info {
-    color: #35c6f6;
-    font-size: 1.5em;
-    font-weight: 600;
+.distancia {
+  color: #1ec3f7;
+  font-size: 14px;
 }
 
-
-.chegada-info {
-    color: #7ae3f8;
-    font-size: 0.95em;
-    margin-left: 13px;
-}
-
-
-.endereco-info {
-    color: #35c6f6;
-    font-size: 1.22em;
-    margin: 5px 0 2px 0;
-    font-weight: bold;
-}
-
-
-.distancia-info {
-    color: #d1e6f8;
-    font-size: 1em;
-}
-
-
-@media (max-width: 370px) {
-    .container-app {
-        width: 98vw;
-    }
+@media (max-width: 400px) {
+  .celular {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+  }
+  .mapa-container, .imagem-mapa {
+    min-height: 200px;
+  }
 }
