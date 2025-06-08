@@ -1,30 +1,53 @@
-<html lang="en">
-
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rota / Horários</title>
+    <link rel="stylesheet" href="estilomapa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
-    <div class="MapaMuro">
-        <img src="Imagens/Icone_BarraMapa.jpg" alt="Barra funcional" width="50" height="50">
-        <h1>Rota/Horarios</h1>
-        <div>
-            <img src="Imagens/Icone_SinoMapa.jpg" alt="Barra funcional" width="50" height="50">
-            <img src="Imagens/Icone_UsuarioMapa.jpg" alt="Barra funcional" width="50" height="50">
+    <div class="container-app">
+        
+        <nav class="barra-navegacao">
+            <i class="fas fa-bars icone-menu"></i>
+            <span class="titulo-navegacao">Rota / Horários</span>
+            <div class="icones-navegacao">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </nav>
+       
+        <div class="linha-navegacao"></div>
+        <
+        <div class="seletor-rota">
+            <span class="texto-rota"><b>Norte / Centro via Dona Francisca</b></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
 
+        <div class="container-mapa">
+            <img src="Mapa.PNG" alt="Mapa da rota" class="imagem-mapa">
+           
+            <div class="marcador-destino">
+                <div class="ponto-marcador"></div>
+                <div class="rotulo-marcador">
+                    <b>Aventureiro, Joinville</b><br>
+                    SC, Brasil
+                </div>
+            </div>
+        </div>
+        
+        <div class="caixa-informacoes">
+            <div>
+                <span class="tempo-info">2h 24min</span>
+                <span class="chegada-info">Chegue às 2:56 PM</span>
+            </div>
+            <div class="endereco-info">
+                <b>R. Albano Schmidt Joinville</b>
+            </div>
+            <div class="distancia-info">
+                12.3 KM
+            </div>
         </div>
     </div>
-
-    <hr class="MapaBoder">
-
-    <h2>Norte/Centro via Dona Francisca</h2>
-
-    <div class="MapaMap">
-        <img src="Imagens/Mapa.PNG" lt="Barra funcional" width="400" height="500">
-        <h4>2h 24min R.Albano Schmidt Joinville</h4>
-    </div>
-
-  
+</body>
+</html>
