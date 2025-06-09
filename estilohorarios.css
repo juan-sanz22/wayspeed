@@ -48,6 +48,7 @@ body {
   font-size: 19px;
   color: #fff;
   position: relative;
+  
 }
 
 .icone-notificacao::after {
@@ -74,13 +75,14 @@ body {
 
 .icone-perfil {
   color: #fff;
-  font-size: 18px;
+  font-size: 18px;  
 }
 
 .divisor {
   border: none;
   border-top: 2px solid #1ec3f7;
   margin: 0;
+  width: 1000%;
 }
 
 /* Lista de rotas */
@@ -88,6 +90,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 1000%;
 }
 
 .lista-rotas li {
