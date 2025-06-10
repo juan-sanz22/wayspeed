@@ -1,30 +1,37 @@
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>Rota / Horários</title>
+  <link rel="stylesheet" href="estilomapa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
-    <div class="MapaMuro">
-        <img src="Imagens/Icone_BarraMapa.jpg" alt="Barra funcional" width="50" height="50">
-        <h1>Rota/Horarios</h1>
-        <div>
-            <img src="Imagens/Icone_SinoMapa.jpg" alt="Barra funcional" width="50" height="50">
-            <img src="Imagens/Icone_UsuarioMapa.jpg" alt="Barra funcional" width="50" height="50">
-
-        </div>
+    <div class="cabecalho">
+      <i class="fas fa-bars icone-menu"></i>
+      <span class="titulo-cabecalho">Rota / Horarios</span>
+      <div class="cabecalho-direita">
+        <i class="fas fa-bell icone-notificacao"></i>
+        <span class="container-perfil">
+          <i class="fas fa-user icone-perfil"></i>
+        </span>
+      </div>
     </div>
-
-    <hr class="MapaBoder">
-
-    <h2>Norte/Centro via Dona Francisca</h2>
-
-    <div class="MapaMap">
-        <img src="Imagens/Mapa.PNG" lt="Barra funcional" width="400" height="500">
-        <h4>2h 24min R.Albano Schmidt Joinville</h4>
+    <div class="seletor-rota">
+      <i class="fas fa-chevron-left seta"></i>
+      <span class="texto-rota">Norte / Centro via Dona Francisca</span>
+      <i class="fas fa-chevron-right seta"></i>
     </div>
-
-  
+    <div class="mapa-container">
+      <img src="IMG/Mapa.PNG" alt="Mapa da rota" class="imagem-mapa">
+    </div>
+    <div class="informacoes-rota">
+      <div class="tempo-rota">2h 24min</div>
+      <div class="chegada">Chegue às 2:56 PM</div>
+      <div class="endereco">R. Albano Schmidt Joinville</div>
+      <div class="distancia">12.3 KM</div>
+    </div>
+  </div>
+</body>
+</html>
+     

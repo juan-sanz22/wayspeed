@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  background: #191a1e;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
+.menu-lateral {
+  width: 320px;
+  background: #191a1e;
+  color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.icone-menu {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.titulo {
+  color: #1ec3f7;
+  font-weight: 700;
+  font-size: 22px;
+  margin-left: -24px;
+  flex: 1;
+  text-align: center;
+}
+
+.icones-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icone-notificacao {
+  font-size: 19px;
+  color: #fff;
+  position: relative;
+  
+}
+
+.icone-notificacao::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #f53b3b;
+  border-radius: 50%;
+  border: 2px solid #191a1e;
+  display: block;
+}
+
+.container-perfil {
+  background: #1ec3f7;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-perfil {
+  color: #fff;
+  font-size: 18px;  
+}
+
+.divisor {
+  border: none;
+  border-top: 2px solid #1ec3f7;
+  margin: 0;
+  width: 1000%;
+}
+
+/* Lista de rotas */
+.lista-rotas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 1000%;
+}
+
+.lista-rotas li {
+  display: flex;
+  align-items: center;
+  padding: 18px 18px 18px 22px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 2px solid #313238;
+  cursor: pointer;
+  transition: background .1s;
+}
+
+.lista-rotas li:last-child {
+  border-bottom: none;
+}
+
+.seta {
+  color: #1ec3f7;
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+.rota-nome {
+  color: #fff;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+@media (max-width: 340px) {
+  .menu-lateral {
+    width: 100vw;
+  }
+  .cabecalho {
+    padding: 0 6px;
+  }
+  .lista-rotas li {
+    padding-left: 10px;
+    font-size: 18px;
+  }
+}

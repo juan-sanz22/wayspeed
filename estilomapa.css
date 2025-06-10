@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  background: #191a1e;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.celular {
+  width: 375px;
+  height: 700px;
+  background: #191a1e;
+  border-radius: 40px;
+  margin: 24px auto;
+  box-shadow: 0 0 26px 2px #00000099;
+  position: relative;
+  overflow: hidden;
+  border: 8px solid #111215;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 26px;
+  padding: 0 18px 0 18px;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+.hora {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.icones-status i {
+  margin-left: 7px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  height: 54px;
+  border-bottom: 2px solid #23242a;
+  padding: 0 18px;
+  background: transparent;
+}
+
+.icone-menu {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.titulo-cabecalho {
+  flex: 1;
+  text-align: center;
+  color: #1ec3f7;
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: -24px;
+  letter-spacing: 0.5px;
+}
+
+.cabecalho-direita {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-notificacao {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+}
+
+.icone-notificacao::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -3px;
+  width: 7px;
+  height: 7px;
+  background: #f53b3b;
+  border-radius: 50%;
+  border: 2px solid #191a1e;
+}
+
+.container-perfil {
+  background: #1ec3f7;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-perfil {
+  color: #fff;
+  font-size: 16px;
+}
+
+
+.seletor-rota {
+  background: #23242a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 8px 0;
+  border-bottom: 1px solid #444;
+  gap: 8px;
+}
+
+.seta {
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.texto-rota {
+  color: #fff;
+  background: #23242a;
+  font-size: 17px;
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #444;
+}
+
+.mapa-container {
+  position: relative;
+  flex: 1;
+  min-height: 340px;
+  background: #eee;
+  overflow: hidden;
+}
+
+.imagem-mapa {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.destino {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.pino {
+  width: 20px;
+  height: 20px;
+  background: #f53b3b;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  margin-right: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 6px #0007;
+}
+
+.texto-destino {
+  background: #fff;
+  color: #d21c1c;
+  padding: 4px 12px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #0001;
+}
+
+
+.informacoes-rota {
+  background: #23242aee;
+  padding: 12px 18px 16px 18px;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: -5px;
+}
+
+.tempo-rota {
+  color: #1ec3f7;
+  font-size: 29px;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.chegada {
+  color: #1ec3f7;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.endereco {
+  color: #1ec3f7;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.distancia {
+  color: #1ec3f7;
+  font-size: 14px;
+}
+
+@media (max-width: 400px) {
+  .celular {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+  }
+  .mapa-container, .imagem-mapa {
+    min-height: 200px;
+  }
+}
