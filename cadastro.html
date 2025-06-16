@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaySpeed - Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <script>checkAuth();</script>
+
+    <div class="container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>WaySpeed</h1>
+                <button class="close-btn">&times;</button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="horarios.html"><i class="fa-solid fa-clock"></i> Horarios</a></li>
+                    <li><a href="monitoramento.html"><i class="fa-solid fa-desktop"></i> Monitoramento</a></li>
+                    <li><a href="relatorio.html"><i class="fa-solid fa-receipt"></i> Relatórios</a></li>
+                    <li><a href="alertas.html"><i class="fa-solid fa-triangle-exclamation"></i> Alertas</a></li>
+                    <li><a href="notificacoes.html"><i class="fas fa-bell"></i> Notificações</a></li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <ul>
+                    <li><a href="cadastro.html"><i class="fa-solid fa-user-plus"></i> Cadastrar</a></li>
+                    <li><a href="funcionarios.html"><i class="fa-solid fa-user"></i> Funcionarios</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2025 WaySpeed. Inc.</p>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <header class="header">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Cadastro</h1>
+            </header>
+
+            <div class="form-container">
+                <form class="cadastro-form">
+                    <div class="form-group">
+                        <label for="username">Nome de usuário</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-email">Confirmação email</label>
+                        <input type="email" id="confirm-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar senha</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Cadastrar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="scriptmenu.js"></script>
+</body>
+</html>

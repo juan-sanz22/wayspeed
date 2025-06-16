@@ -1,74 +1,134 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alertas</title>
-  <link rel="stylesheet" href="alertasstyle.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaySpeed - Alertas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/alertas.css">
 </head>
 <body>
-  <div class="phone">
-    <header>
-      <div class="top-bar">
-        <span class="time">12:32</span>
-        <div class="icons">
-          <span class="wifi"></span>
-          <span class="battery"></span>
-        </div>
-      </div>
-      <div class="menu-bar">
-        <div class="menu-icon">☰</div>
-        <h1>ALERTAS</h1>
-        <div class="user-icons">
-          <span class="bell">🔔</span>
-          <span class="user">👤</span>
-        </div>
-      </div>
-    </header>
+    <div class="container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>WaySpeed</h1>
+                <button class="close-btn">&times;</button>
+            </div>
+            <nav class="sidebar-nav">
+              <ul>
+                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="horarios.html"><i class="fa-solid fa-clock"></i> Horarios</a></li>
+                <li><a href="monitoramento.html"><i class="fa-solid fa-desktop"></i> Monitoramento</a></li>
+                <li><a href="relatorio.html"><i class="fa-solid fa-receipt"></i> Relatórios</a></li>
+                <li><a href="alertas.html"><i class="fa-solid fa-triangle-exclamation"></i> Alertas</a></li>
+                <li><a href="notificacoes.html"><i class="fas fa-bell"></i> Notificações</a></li>
+            </ul>
+                
+                <div class="divider"></div>
+                
+                <ul>
+                <li><a href="cadastro.html"><i class="fa-solid fa-user-plus"></i> Cadastrar</a></li>
+                <li><a href="funcionarios.html"><i class="fa-solid fa-user"></i> Funcionarios</a></li>
+            </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2025 WaySpeed. Inc.</p>
+            </div>
+        </aside>
 
-    <div class="status-box">
-      <div class="status concluido">14<br><span>Concluídos</span></div>
-      <div class="status alerta">20<br><span>Alertas</span></div>
-      <div class="status grave">41<br><span>Graves</span></div>
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <header class="header">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Alertas</h1>
+            </header>
+
+            <div class="alertas-container">
+                <section class="estatisticas-alertas">
+                    <div class="estatistica-item">
+                        <div class="numero-alerta">14</div>
+                        <div class="rotulo-alerta">Concluídos</div>
+                    </div>
+                    <div class="estatistica-item">
+                        <div class="numero-alerta">20</div>
+                        <div class="rotulo-alerta">Alertas</div>
+                    </div>
+                    <div class="estatistica-item grave">
+                        <div class="numero-alerta">41</div>
+                        <div class="rotulo-alerta">Graves</div>
+                    </div>
+                </section>
+
+                <div class="divider-horizontal"></div>
+
+                <section class="novos-alertas">
+                    <h2>Novos Alerta...</h2>
+                    <div class="lista-alertas">
+                        <div class="alerta-item">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">Alerta resolvido com sucesso!</span>
+                            </label>
+                        </div>
+                        <div class="alerta-item ativo">
+                            <label class="checkbox-container">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">Fique ligado tem um alerta para resolver (explicação alerta)</span>
+                            </label>
+                        </div>
+                        <div class="alerta-item">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">PERIGO, tome cuidado!</span>
+                            </label>
+                        </div>
+                        <div class="alerta-item">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">Alerta resolvido com sucesso!</span>
+                            </label>
+                        </div>
+                        <div class="alerta-item ativo">
+                            <label class="checkbox-container">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">Fique ligado tem um alerta para resolver (explicação alerta)</span>
+                            </label>
+                        </div>
+                        <div class="alerta-item">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">PERIGO, tome cuidado!</span>
+                            </label>
+                        </div>
+                        <div class="alerta-item">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">Alerta resolvido com sucesso!</span>
+                            </label>
+                        </div>
+                        <div class="alerta-item">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="texto-alerta">Fique ligado tem um alerta para resolver (explicação alerta)</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
     </div>
 
-    <section class="alert-section">
-      <h2>NOVOS ALERTAS PRA VOCÊ...</h2>
-      <div class="alert-list">
-        <div class="alert success">
-          <span>✔️ Alerta resolvido com sucesso!</span>
-          <input type="checkbox" checked/>
-        </div>
-        <div class="alert warning">
-          <span>⚠️ Fique ligado tem um alerta para resolver (explicação alerta)</span>
-          <input type="checkbox"/>
-        </div>
-        <div class="alert danger">
-          <span>❌ PERIGO, tome cuidado!</span>
-          <input type="checkbox"/>
-        </div>
-        <div class="alert success">
-          <span>✔️ Alerta resolvido com sucesso!</span>
-          <input type="checkbox" checked/>
-        </div>
-        <div class="alert warning">
-          <span>⚠️ Fique ligado tem um alerta para resolver (explicação alerta)</span>
-          <input type="checkbox"/>
-        </div>
-        <div class="alert danger">
-          <span>❌ PERIGO, tome cuidado!</span>
-          <input type="checkbox"/>
-        </div>
-        <div class="alert success">
-          <span>✔️ Alerta resolvido com sucesso!</span>
-          <input type="checkbox" checked/>
-        </div>
-        <div class="alert warning">
-          <span>⚠️ Fique ligado tem um alerta para resolver (explicação alerta)</span>
-          <input type="checkbox"/>
-        </div>
-      </div>
-    </section>
-  </div>
+    <script src="scriptmenu.js"></script>
 </body>
 </html>
