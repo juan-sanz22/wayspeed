@@ -42,7 +42,7 @@
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Relatório</h1>
+                <h1><b>Relatório</b></h1>
             </header>
 
             <div class="relatorio-container">

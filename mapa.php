@@ -17,7 +17,7 @@
         <button class="menu-btn">
             <a href="horarios.php"><i class="fa-solid fa-reply"></i></a>
         </button>
-        <h1>Rota / Horários</h1>
+        <h1><b>Rota / Horários</b></h1>
       </header>
 
       <div class="rota-detalhes-container">

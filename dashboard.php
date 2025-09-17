@@ -44,7 +44,7 @@
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Dashboard</h1>
+                <h1><b>Dashboard</b></h1>
             </header>
 
             <div class="dashboard-grid">

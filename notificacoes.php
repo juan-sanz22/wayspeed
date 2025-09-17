@@ -43,7 +43,7 @@
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Notificações</h1>
+                <h1><b>Notificações</b></h1>
             </header>
 
             <div class="notificacoes-container">

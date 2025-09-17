@@ -45,7 +45,7 @@
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Funcionários</h1>
+                <h1><b>Funcionários</b></h1>
             </header>
 
             <div class="funcionarios-container">
