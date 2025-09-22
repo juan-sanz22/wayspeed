@@ -43,7 +43,7 @@
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Monitoramento</h1>
+                <h1><b>Monitoramento</b></h1>
             </header>
 
             <div class="monitoramento-container">

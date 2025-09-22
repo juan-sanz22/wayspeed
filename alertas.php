@@ -43,7 +43,7 @@
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Alertas</h1>
+                <h1><b>Alertas</b></h1>
             </header>
 
             <div class="alertas-container">

@@ -44,21 +44,21 @@
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Horários</h1>
+                <h1><b>Horários</b></h1>
             </header>
 
             <div class="rotas-container">
                 <h2>Rotas Disponíveis</h2>
                 <ul class="rotas-list">
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Central</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Norte</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Iririu</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Itaum</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Vila Nova</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Sul</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Tupy</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Guanabara</a></li>
-                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-down"></i> Rota Pirabeiraba</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Central</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Norte</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Iririu</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Itaum</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Vila Nova</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Sul</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Tupy</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Guanabara</a></li>
+                    <li><a href="mapa.php"><i class="fa-solid fa-chevron-right"></i> Rota Pirabeiraba</a></li>
                 </ul>
             </div>
         </main>
