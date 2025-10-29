@@ -11,9 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "INSERT INTO usuarios (username, email, hash_senha) VALUES (?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$username, $email, $hash_senha]);
-        $msg = "✅ Insumo adicionado com sucesso!";
+        $msg = "Cadastro adicionado com sucesso!";
     } else {
-        $msg = "⚠️ Preencha todos os campos corretamente!";
+        $msg = "Preencha todos os campos corretamente!";
     }
 }
 ?>
