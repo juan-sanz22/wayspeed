@@ -1,3 +1,26 @@
+<?php
+require 'conexao.php';
+$msg = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = ($_POST['username']);
+    $email = ($_POST['email']);
+    $hash_senha = ($_POST['senha']);
+
+    if ($username && $email && $hash_senha >= 0) {
+        $sql = "INSERT INTO usuarios (username, email, hash_senha) VALUES (?, ?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$username, $email, $hash_senha]);
+        $msg = "✅ Insumo adicionado com sucesso!";
+    } else {
+        $msg = "⚠️ Preencha todos os campos corretamente!";
+    }
+}
+?>
+
+<h2>Novo Insumo</h2>
+<p><?= $msg ?></p>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -49,15 +72,15 @@
             </header>
 
             <div class="form-container">
-                <form class="cadastro-form">
+                <form class="cadastro-form" action="processar.php" method="post">
                     <div class="form-group">
                         <label for="username">Nome de usuário</label>
-                        <input type="text" id="username" required>
+                        <input type="text" id="username" name="username" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
@@ -66,13 +89,13 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" required>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="hash_senha" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="confirm-password">Confirmar senha</label>
-                        <input type="password" id="confirm-password" required>
+                        <label for="confirm-senha">Confirmar senha</label>
+                        <input type="password" id="confirm-senha" required>
                     </div>
                     
                     <button type="submit" class="submit-btn">Cadastrar</button>
