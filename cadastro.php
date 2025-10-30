@@ -3,14 +3,14 @@ require 'conexao.php';
 $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = ($_POST['username']);
+    $username = ($_POST['nome']);
     $email = ($_POST['email']);
-    $hash_senha = ($_POST['senha']);
+    $senha = ($_POST['senha']);
 
-    if ($username && $email && $hash_senha >= 0) {
-        $sql = "INSERT INTO usuarios (username, email, hash_senha) VALUES (?, ?, ?, ?)";
+    if ($username && $email && $senha) {
+        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$username, $email, $hash_senha]);
+        $stmt->execute([$username, $email, $senha]);
         $msg = "Cadastro adicionado com sucesso!";
     } else {
         $msg = "Preencha todos os campos corretamente!";
@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
-    <script>checkAuth();</script>
 
     <div class="container">
         <!-- Menu Lateral -->
@@ -72,12 +71,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </header>
 
             <div class="form-container">
-                <form class="cadastro-form" action="processar.php" method="post">
+                <form class="cadastro-form">
                     <div class="form-group">
                         <label for="username">Nome de usuário</label>
                         <input type="text" id="username" name="username" required>
                     </div>
-                    
+                    <div class="form-group">
+                        <label for="tipo">Cargo</label>
+                        <input type="text" id="cargo" name="tipo" required>
+                    </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
@@ -90,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input type="password" id="senha" name="hash_senha" required>
+                        <input type="password" id="senha" name="senha" required>
                     </div>
                     
                     <div class="form-group">

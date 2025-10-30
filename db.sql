@@ -123,12 +123,10 @@ FOREIGN KEY (viagem_id) REFERENCES Viagens(viagem_id)
 CREATE TABLE Usuarios (
 usuario_id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100) NOT NULL,
-tipo ENUM('controlador', 'engenheiro', 'planejador', 'maquinista', 'administrador') NOT
+tipo ENUM('supervisor', 'engenheiro', 'maquinista', 'administrador') NOT
 NULL,
-email VARCHAR(100) UNIQUE NOT NULL,
-hash_senha VARCHAR(255) NOT NULL,
-ultimo_login DATETIME,
-status ENUM('ativo', 'inativo', 'suspenso') DEFAULT 'ativo'
+email VARCHAR(100) NOT NULL,
+senha VARCHAR(255) NOT NULL,
 );
 
 -- Tabela de Posições de Trem em Tempo Real
