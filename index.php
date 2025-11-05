@@ -1,30 +1,37 @@
 <?php
+include('conexao.php'); // conexão PDO
+session_start();
 
-include('conexao.php');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    $nome = $_POST['username'] ?? '';
+    $senha = $_POST['password'] ?? '';
 
-if(isset($POST['email']) || isset($_POST['senha'])) {
-
-    if(isset($POST['email']) == 0) {
-        echo "Preencha seu email";
-    } else if(strlen($_POST['senha']) == 0) {
-        echo "Preencha sua senha";
+    if (empty($nome) || empty($senha)) {
+        echo "<p style='color:red;'>Preencha todos os campos.</p>";
     } else {
-        $nome = $_POST['username'];
-        $senha = $_POST['password'];
+        // Consulta com PDO
+        $stmt = $pdo->prepare("SELECT usuario_id, nome, senha FROM Usuarios WHERE nome = ?");
+        $stmt->execute([$nome]);
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $stmt = $mysqli->prepare("SELECT usuario_id, nome, hash_senha FROM usuarios WHERE nome = ?, hash_senha = ?");
-        $stmt->bind_param("ss", $nome, $senha);
-        if($stmt->execute()){
-            echo "Login feito";
-            header("location: dashboard.php");
+        if ($usuario) {
+            // Verifica senha criptografada
+            if (password_verify($senha, $usuario['senha'])) {
+                $_SESSION['usuario_id'] = $usuario['usuario_id'];
+                $_SESSION['nome'] = $usuario['nome'];
+                
+                header("Location: dashboard.php");
+                exit;
+            } else {
+                echo "<p style='color:red;'>Senha incorreta.</p>";
+            }
+        } else {
+            echo "<p style='color:red;'>Usuário não encontrado.</p>";
         }
     }
 }
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -36,7 +43,7 @@ if(isset($POST['email']) || isset($_POST['senha'])) {
 <body>
     <div class="login-container">
         <h1>LOGIN</h1>
-        <form id="loginForm">
+        <form id="loginForm" method="POST">
             <div class="form-group">
                 <label for="username">Nome de usuário</label>
                 <input type="text" id="username" name="username" placeholder="Nome de Usuário" required>
@@ -45,14 +52,10 @@ if(isset($POST['email']) || isset($_POST['senha'])) {
             <div class="form-group">
                 <label for="password">Senha</label>
                 <input type="password" id="password" name="password" placeholder="Senha" required>
-                <small>Esqueceu a Senha?</small>
             </div>
             
             <button type="submit" class="btn-login">Login</button>
-            
         </form>
     </div>
-    
-    <script src="scriptmenu.js"></script>
 </body>
 </html>
