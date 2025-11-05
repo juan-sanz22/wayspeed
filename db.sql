@@ -123,8 +123,6 @@ FOREIGN KEY (viagem_id) REFERENCES Viagens(viagem_id)
 CREATE TABLE Usuarios (
 usuario_id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100) NOT NULL,
-tipo ENUM('supervisor', 'engenheiro', 'maquinista', 'administrador') NOT
-NULL,
 email VARCHAR(100) NOT NULL,
 senha VARCHAR(255) NOT NULL
 );
