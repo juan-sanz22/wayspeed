@@ -3,7 +3,7 @@ require 'conexao.php';
 $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = ($_POST['nome']);
+    $username = ($_POST['username']);
     $email = ($_POST['email']);
     $senha = ($_POST['senha']);
 
@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<h2>Novo Insumo</h2>
 <p><?= $msg ?></p>
 
 <!DOCTYPE html>

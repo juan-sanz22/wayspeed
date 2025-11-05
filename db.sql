@@ -126,7 +126,7 @@ nome VARCHAR(100) NOT NULL,
 tipo ENUM('supervisor', 'engenheiro', 'maquinista', 'administrador') NOT
 NULL,
 email VARCHAR(100) NOT NULL,
-senha VARCHAR(255) NOT NULL,
+senha VARCHAR(255) NOT NULL
 );
 
 -- Tabela de Posições de Trem em Tempo Real
