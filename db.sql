@@ -119,12 +119,12 @@ status_resolucao ENUM('aberto', 'em_tratamento', 'resolvido') DEFAULT 'aberto',
 FOREIGN KEY (viagem_id) REFERENCES Viagens(viagem_id)
 );
 
--- Tabela de Usuários
 CREATE TABLE Usuarios (
 usuario_id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100) NOT NULL,
 email VARCHAR(100) NOT NULL,
-senha VARCHAR(255) NOT NULL
+senha VARCHAR(255) NOT NULL,
+cargo VARCHAR(50) NOT NULL
 );
 
 -- Tabela de Posições de Trem em Tempo Real

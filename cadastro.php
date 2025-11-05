@@ -2,27 +2,39 @@
 require 'conexao.php';
 
 $msg = '';
+$msg_class = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'] ?? '';
     $email = $_POST['email'] ?? '';
     $senha = $_POST['senha'] ?? '';
+    $cargo = $_POST['tipo'] ?? '';
 
-    if ($username && $email && $senha) {
-        $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([$username, $email, $senha_hash]);
-        $msg = "Cadastro adicionado com sucesso!";
+    if ($username && $email && $senha && $cargo) {
+        $sql_check = "SELECT COUNT(*) FROM usuarios WHERE email = ?";
+        $stmt_check = $pdo->prepare($sql_check);
+        $stmt_check->execute([$email]);
+        $existe = $stmt_check->fetchColumn();
+
+        if ($existe > 0) {
+            $msg = "Este e-mail já está cadastrado!";
+            $msg_class = "error";
+        } else {
+            $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO usuarios (nome, email, senha, cargo) VALUES (?, ?, ?, ?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$username, $email, $senha_hash, $cargo]);
+            $msg = "Cadastro adicionado com sucesso!";
+            $msg_class = "success";
+        }
     } else {
         $msg = "Preencha todos os campos corretamente!";
+        $msg_class = "error";
     }
 }
 ?>
  
-<p><?= $msg ?></p>
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -72,6 +84,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </header>
 
             <div class="form-container">
+    <?php if (!empty($msg)) : ?>
+        <p class="msg"><?= $msg ?></p>
+    <?php endif; ?>
+
                 <form class="cadastro-form" method="POST" action="cadastro.php">
                     <div class="form-group">
                         <label for="username">Nome de usuário</label>
@@ -79,34 +95,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="form-group">
                         <label for="tipo">Cargo</label>
-                        <input type="text" id="cargo" name="tipo" required>
+    <select id="cargo" name="tipo" required>
+        <option value="">Selecione o cargo</option>
+        <option value="Administrador">Administrador</option>
+        <option value="Gerente">Gerente</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Tecnico">Técnico</option>
+        <option value="Operador">Operador</option>
+        <option value="Estagiario">Estagiário</option>
+    </select>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    
                     <div class="form-group">
                         <label for="confirm-email">Confirmação email</label>
                         <input type="email" id="confirm-email" required>
                     </div>
-                    
                     <div class="form-group">
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" name="senha" required>
                     </div>
-                    
                     <div class="form-group">
                         <label for="confirm-senha">Confirmar senha</label>
                         <input type="password" id="confirm-senha" required>
                     </div>
-                    
                     <button type="submit" class="submit-btn">Cadastrar</button>
                 </form>
             </div>
         </main>
     </div>
 
-    <script src="scriptmenu.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
