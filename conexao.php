@@ -1,14 +1,13 @@
 <?php
-
-$usuario = 'root';
-$senha = 'root';
-$database = 'gerenciamento_ferroviario';
 $host = 'localhost';
+$dbname = 'gerenciamento_ferroviario';
+$user = 'root';
+$pass = 'root';
 
-$mysqli = new mysqli ($host, $usuario, $senha, $database);
-
-if($mysqli-> error) {
-    die("Falha ao conectar ao banco de dados" . $mysqli->error);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro na conexão: " . $e->getMessage());
 }
-
 ?>

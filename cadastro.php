@@ -1,16 +1,18 @@
 <?php
 require 'conexao.php';
+
 $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = ($_POST['username']);
-    $email = ($_POST['email']);
-    $senha = ($_POST['senha']);
+    $username = $_POST['username'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
 
     if ($username && $email && $senha) {
-        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?, ?)";
+        $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$username, $email, $senha]);
+        $stmt->execute([$username, $email, $senha_hash]);
         $msg = "Cadastro adicionado com sucesso!";
     } else {
         $msg = "Preencha todos os campos corretamente!";
@@ -70,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </header>
 
             <div class="form-container">
-                <form class="cadastro-form">
+                <form class="cadastro-form" method="POST" action="cadastro.php">
                     <div class="form-group">
                         <label for="username">Nome de usuário</label>
                         <input type="text" id="username" name="username" required>
