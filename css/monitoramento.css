@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-/* Menu Lateral */
+
 .sidebar {
     width: 250px;
     background-color: #252737;
@@ -100,7 +100,7 @@ body {
     width: 100%;
 }
 
-/* Conteúdo Principal */
+
 .main-content {
     flex: 1;
     transition: all 0.3s ease;
@@ -129,7 +129,7 @@ body {
     font-weight: 600;
 }
 
-/* Monitoramento */
+
 .monitoramento-container {
     display: grid;
     gap: 25px;
@@ -241,7 +241,7 @@ body {
     background-color: rgba(243, 156, 18, 1);
 }
 
-/* Responsividade */
+
 @media (max-width: 992px) {
     .monitoramento-container {
         grid-template-columns: 1fr;

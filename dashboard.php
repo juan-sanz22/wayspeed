@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <!-- Menu Lateral -->
+        
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>WaySpeed</h1>
@@ -48,7 +48,7 @@
             </header>
 
             <div class="dashboard-grid">
-                <!-- Seção Alertas -->
+                
                 <section class="card alertas">
                     <h2>Alertas</h2>
                     <div class="stats-container">
@@ -67,7 +67,7 @@
                     </div>
                 </section>
 
-                <!-- Seção Relatório -->
+                
                 <section class="card relatorio">
                     <h2>Relatório</h2>
                     <div class="stats-container">
@@ -112,7 +112,7 @@
                     </div>
                 </section>
 
-                <!-- Seção Horários -->
+                
                 <section class="card horarios">
                     <h2>Horários</h2>
                     <div class="horarios-content">
@@ -122,7 +122,7 @@
                     </div>
                 </section>
 
-                <!-- Seção Monitoramento -->
+                
                 <section class="card monitoramento">
                     <h2>Monitoramento</h2>
                     <div class="stats-container">

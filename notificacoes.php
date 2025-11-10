@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Menu Lateral -->
+        
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>WaySpeed</h1>
@@ -37,7 +37,7 @@
             </div>
         </aside>
 
-        <!-- Conteúdo Principal -->
+        
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">
@@ -47,7 +47,7 @@
             </header>
 
             <div class="notificacoes-container">
-                <!-- Barra de Pesquisa e Filtros -->
+                
                 <div class="notificacoes-header">
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
@@ -55,9 +55,9 @@
                     </div>
                 </div>
 
-                <!-- Lista de Notificações -->
+                
                 <div class="notificacoes-list">
-                    <!-- Notificação 1 -->
+                    
                     <div class="notificacao-item unread">
                         <div class="notificacao-header">
                             <span class="setor">Setor de Administração</span>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
 
-                    <!-- Notificação 2 -->
+                    
                     <div class="notificacao-item unread">
                         <div class="notificacao-header">
                             <span class="setor">Setor de Administração</span>

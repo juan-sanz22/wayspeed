@@ -11,13 +11,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Container Principal */
+
 .container {
     display: flex;
     min-height: 100vh;
 }
 
-/* Menu Lateral */
+
 .sidebar {
     width: 250px;
     background-color: #252737;
@@ -101,7 +101,7 @@ body {
     width: 100%;
 }
 
-/* Conteúdo Principal */
+
 .main-content {
     flex: 1;
     margin-left: 250px;
@@ -131,7 +131,7 @@ body {
     color: #3498db;
 }
 
-/* Relatório */
+
 .relatorio-container {
     background-color: var(--card-bg);
     border-radius: 10px;
@@ -252,12 +252,12 @@ body {
     margin-left: 10px;
 }
 
-/* Checkbox desmarcado estilizado */
+
 .checkbox-container input:not(:checked)~.rota-text {
     color: #95a5a6;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);

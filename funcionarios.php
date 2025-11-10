@@ -49,7 +49,7 @@
             </header>
 
             <div class="funcionarios-container">
-                <!-- Seção Novo -->
+                
                 <section class="novo-section">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
@@ -60,9 +60,9 @@
                     </button>
                 </section>
 
-                <!-- Lista de Funcionários -->
+               
                 <div class="funcionarios-list">
-                    <!-- Funcionário 1 -->
+                    
                     <div class="funcionario-card">
                         <div class="funcionario-header">
                             <h3>Averton</h3>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
 
-                    <!-- Funcionário 2 -->
+                    
                     <div class="funcionario-card rh">
                         <div class="funcionario-header">
                             <h3>Setor RH</h3>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
 
-                    <!-- Funcionário 3 -->
+                    
                     <div class="funcionario-card">
                         <div class="funcionario-header">
                             <h3>José L.</h3>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
 
-                    <!-- Funcionário 4 -->
+                    
                     <div class="funcionario-card rh">
                         <div class="funcionario-header">
                             <h3>Setor RH</h3>
@@ -112,7 +112,7 @@
                         </div>
                     </div>
 
-                    <!-- Funcionário 5 -->
+                    
                     <div class="funcionario-card">
                         <div class="funcionario-header">
                             <h3>Maria</h3>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
 
-                    <!-- Funcionário 6 -->
+                    
                     <div class="funcionario-card rh">
                         <div class="funcionario-header">
                             <h3>Setor RH</h3>
@@ -137,7 +137,7 @@
                         </div>
                     </div>
 
-                    <!-- Funcionário 7 -->
+                    
                     <div class="funcionario-card">
                         <div class="funcionario-header">
                             <h3>Pedro</h3>
@@ -151,7 +151,7 @@
                         </div>
                     </div>
 
-                    <!-- Funcionário 8 -->
+                    
                     <div class="funcionario-card rh">
                         <div class="funcionario-header">
                             <h3>Setor RH</h3>

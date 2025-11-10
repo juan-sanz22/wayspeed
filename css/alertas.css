@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
 }
 
-/* Menu Lateral (mantido igual aos anteriores) */
+
 .sidebar {
   width: var(--sidebar-width);
   background-color: #252737;
@@ -96,7 +96,7 @@ body {
   width: 100%;
 }
 
-/* Conteúdo Principal */
+
 .main-content {
   flex: 1;
   margin-left: var(--sidebar-width);
@@ -127,7 +127,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* Alertas */
+
 .alertas-container {
   background-color: #252737;
   border-radius: 10px;
@@ -260,7 +260,7 @@ body {
   flex-grow: 1;
 }
 
-/* Responsividade */
+
 @media (max-width: 992px) {
   .estatisticas-alertas {
       flex-direction: column;

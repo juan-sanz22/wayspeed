@@ -1,5 +1,5 @@
 <?php
-include('conexao.php'); // conexão PDO
+include('conexao.php'); 
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -10,13 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($nome) || empty($senha)) {
         echo "<p style='color:red;'>Preencha todos os campos.</p>";
     } else {
-        // Consulta com PDO
+        
         $stmt = $pdo->prepare("SELECT usuario_id, nome, senha FROM Usuarios WHERE nome = ?");
         $stmt->execute([$nome]);
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($usuario) {
-            // Verifica senha criptografada
+            
             if (password_verify($senha, $usuario['senha'])) {
                 $_SESSION['usuario_id'] = $usuario['usuario_id'];
                 $_SESSION['nome'] = $usuario['nome'];

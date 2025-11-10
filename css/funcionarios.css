@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Menu Lateral */
+
 .sidebar {
     width: 250px;
     background-color: #252737;
@@ -87,7 +87,7 @@ body {
     width: 100%;
 }
 
-/* Conteúdo Principal */
+
 .main-content {
     flex: 1;
     margin-left: 250px;
@@ -117,7 +117,7 @@ body {
     color: #3498db;
 }
 
-/* Funcionários */
+
 .funcionarios-container {
     background-color: var(--bg-card);
     border-radius: 10px;
@@ -236,7 +236,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);

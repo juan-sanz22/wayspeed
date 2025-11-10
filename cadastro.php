@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </aside>
 
-        <!-- Conteúdo Principal -->
+        
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Menu Lateral -->
+        
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>WaySpeed</h1>
@@ -38,7 +38,7 @@
             </div>
         </aside>
 
-        <!-- Conteúdo Principal -->
+        
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">
