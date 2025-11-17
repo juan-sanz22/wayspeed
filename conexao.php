@@ -10,4 +10,7 @@ try {
 } catch (PDOException $e) {
     die("Erro na conexão: " . $e->getMessage());
 }
+
+require 'conexao.php';
+echo "Conexão OK!";
 ?>
