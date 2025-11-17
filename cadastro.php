@@ -121,6 +121,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="confirm-senha">Confirmar senha</label>
                         <input type="password" id="confirm-senha" required>
                     </div>
+                    <hr>
+                    <br>
+                    <div class="form-group">
+                        <label for="confirm-cep">CEP</label>
+                        <input type="cep" id="confirm-cep" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="logradouro">Logradouro / Nome</label>
+                        <input type="name" id="logradouro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bairro">Bairro</label>
+                        <input type="name" id="bairro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="localidade">Localidade / UF</label>
+                        <input type="name" id="localidade" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero">Número</label>
+                        <input type="number" id="numero" required>
+                    </div>
                     <button type="submit" class="submit-btn">Cadastrar</button>
                 </form>
             </div>
