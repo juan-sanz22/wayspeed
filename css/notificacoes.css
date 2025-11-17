@@ -15,11 +15,11 @@ body {
     min-height: 100vh;
 }
 
-/* Menu Lateral */
+
 .sidebar {
     width: 250px;
-    background-color:#1E1F26 ;
-    color: var: #fff;
+    background-color: #1E1F26;
+    color: #fff; 
     transition: all 0.3s ease;
     position: fixed;
     height: 100vh;
@@ -87,7 +87,7 @@ body {
     width: 100%;
 }
 
-/* Conteúdo Principal */
+
 .main-content {
     flex: 1;
     margin-left: 250px;
@@ -117,7 +117,7 @@ body {
     color: #1ec3f7;
 }
 
-/* Notificações */
+
 .notificacoes-container {
     background-color: #000;
     border-radius: 10px;
@@ -206,7 +206,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);

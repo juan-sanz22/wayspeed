@@ -1,8 +1,8 @@
--- Criação do banco de dados
+
 CREATE DATABASE gerenciamento_ferroviario;
 USE gerenciamento_ferroviario;
 
--- Tabela de Trens
+
 CREATE TABLE Trens (
 trem_id INT AUTO_INCREMENT PRIMARY KEY,
 numero_serie VARCHAR(50) UNIQUE NOT NULL,
@@ -15,7 +15,7 @@ quilometragem_total DECIMAL(12,2) DEFAULT 0.00,
 data_ultima_inspecao DATE
 );
 
--- Tabela de Estações
+
 CREATE TABLE Estacoes (
 estacao_id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100) NOT NULL,
@@ -25,7 +25,7 @@ tipo ENUM('passageiros', 'carga', 'mista') NOT NULL,
 capacidade_estacionamento INT
 );
 
--- Tabela de Rotas
+
 CREATE TABLE Rotas (
 rota_id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100) NOT NULL,
@@ -37,7 +37,7 @@ FOREIGN KEY (estacao_origem) REFERENCES Estacoes(estacao_id),
 FOREIGN KEY (estacao_destino) REFERENCES Estacoes(estacao_id)
 );
 
--- Tabela de Segmentos
+
 CREATE TABLE Segmentos (
 segmento_id INT AUTO_INCREMENT PRIMARY KEY,
 rota_id INT NOT NULL,
@@ -51,7 +51,7 @@ FOREIGN KEY (estacao_inicio) REFERENCES Estacoes(estacao_id),
 FOREIGN KEY (estacao_fim) REFERENCES Estacoes(estacao_id)
 );
 
--- Tabela de Viagens
+
 CREATE TABLE Viagens (
 viagem_id INT AUTO_INCREMENT PRIMARY KEY,
 trem_id INT NOT NULL,
@@ -67,7 +67,7 @@ FOREIGN KEY (trem_id) REFERENCES Trens(trem_id),
 FOREIGN KEY (rota_id) REFERENCES Rotas(rota_id)
 );
 
--- Tabela de Sensores
+
 CREATE TABLE Sensores (
 sensor_id INT AUTO_INCREMENT PRIMARY KEY,
 tipo ENUM('temperatura', 'peso', 'velocidade', 'vibracao', 'umidade', 'corrente_eletrica')
@@ -80,7 +80,7 @@ data_instalacao DATE NOT NULL,
 status ENUM('ativo', 'inativo', 'defeituoso') DEFAULT 'ativo'
 );
 
--- Tabela de Leituras de Sensor
+
 CREATE TABLE LeiturasSensor (
 leitura_id BIGINT AUTO_INCREMENT PRIMARY KEY,
 sensor_id INT NOT NULL,
@@ -91,7 +91,7 @@ FOREIGN KEY (sensor_id) REFERENCES Sensores(sensor_id),
 INDEX idx_timestamp (timestamp)
 );
 
--- Tabela de Manutenções
+
 CREATE TABLE Manutencoes (
 manutencao_id INT AUTO_INCREMENT PRIMARY KEY,
 trem_id INT NOT NULL,
@@ -107,7 +107,7 @@ quilometragem_trem DECIMAL(12,2),
 FOREIGN KEY (trem_id) REFERENCES Trens(trem_id)
 );
 
--- Tabela de Alertas
+
 CREATE TABLE Alertas (
 alerta_id INT AUTO_INCREMENT PRIMARY KEY,
 tipo ENUM('atraso', 'falha_tecnica', 'seguranca', 'manutencao', 'climatico') NOT NULL,
@@ -127,7 +127,7 @@ senha VARCHAR(255) NOT NULL,
 cargo VARCHAR(50) NOT NULL
 );
 
--- Tabela de Posições de Trem em Tempo Real
+
 CREATE TABLE PosicoesTrem (
 posicao_id BIGINT AUTO_INCREMENT PRIMARY KEY,
 trem_id INT NOT NULL,
@@ -142,7 +142,7 @@ FOREIGN KEY (viagem_id) REFERENCES Viagens(viagem_id),
 INDEX idx_timestamp (timestamp)
 );
 
--- Tabela de Histórico de Consumo Energético
+
 CREATE TABLE ConsumoEnergetico (
 registro_id INT AUTO_INCREMENT PRIMARY KEY,
 trem_id INT NOT NULL,
@@ -155,7 +155,7 @@ FOREIGN KEY (trem_id) REFERENCES Trens(trem_id),
 UNIQUE KEY uk_trem_data (trem_id, data)
 );
 
--- Tabela de Notificações para Usuários
+
 CREATE TABLE Notificacoes (
 notificacao_id INT AUTO_INCREMENT PRIMARY KEY,
 usuario_id INT NOT NULL,
@@ -167,7 +167,7 @@ FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
 FOREIGN KEY (alerta_id) REFERENCES Alertas(alerta_id)
 );
 
--- Índices adicionais para otimização
+
 CREATE INDEX idx_viagens_trem ON Viagens(trem_id);
 CREATE INDEX idx_viagens_rota ON Viagens(rota_id);
 CREATE INDEX idx_viagens_status ON Viagens(status);

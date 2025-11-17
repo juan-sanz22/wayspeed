@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-/* Menu Lateral */
+
 .sidebar {
     width: 250px;
     background-color: #252737;
@@ -83,7 +83,7 @@ body {
     width: 100%;
 }
 
-/* Conteúdo Principal */
+
 .main-content {
     flex: 1;
     margin-left: 250px;
@@ -113,7 +113,7 @@ body {
     color: #3498db;
 }
 
-/* Formulário de Cadastro */
+
 .form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -169,7 +169,7 @@ body {
     background-color: #29b954;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
@@ -220,7 +220,7 @@ body {
     font-size: 1rem;
     background-color: #fff;
     color: #333;
-    appearance: none; /* Remove setinha padrão do browser */
+    appearance: none; 
     -webkit-appearance: none;
     -moz-appearance: none;
     cursor: pointer;

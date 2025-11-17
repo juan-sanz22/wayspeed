@@ -28,7 +28,7 @@ body {
     min-height: 100vh;
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: var(--sidebar-width);
     background-color: var(--secondary-color);
@@ -108,7 +108,7 @@ button{
     width: 100%;
 }
 
-/* Main Content Styles */
+
 .main-content {
     flex: 1;
     margin-left: var(--sidebar-width);
@@ -154,7 +154,7 @@ button{
     color: var(--text-color);
 }
 
-/* Alertas Section */
+
 .alertas .stats-container {
     display: flex;
     justify-content: space-between;
@@ -176,7 +176,7 @@ button{
     color: var(--text-color);
 }
 
-/* Relatório Section */
+
 .relatorio .stats-container {
     margin-bottom: 20px;
 }
@@ -214,7 +214,7 @@ button{
     border-radius: 5px;
 }
 
-/* Horários Section */
+
 .horarios-content {
     color: #2c3e50;
     margin-top: 15px;
@@ -234,7 +234,7 @@ button{
     font-weight: 500;
 }
 
-/* Monitoramento Section */
+
 .monitoramento .stats-container {
     display: flex;
     justify-content: space-between;
@@ -256,7 +256,7 @@ button{
     color: var(--text-color);
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .dashboard-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
