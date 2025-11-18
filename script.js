@@ -50,14 +50,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const searchInput = document.querySelector(".search-box input");
-const cards = document.querySelectorAll(".funcionario-card");
+document.addEventListener("DOMContentLoaded", () => {
+    const cepInput = document.getElementById("confirm-cep");
+    if (cepInput) {
+        cepInput.addEventListener("blur", function () {
+            let cep = this.value.replace(/\D/g, '');
 
-searchInput.addEventListener("input", () => {
-    const value = searchInput.value.toLowerCase();
+            if (cep.length !== 8) {
+                alert("CEP inválido! Digite 8 números.");
+                return;
+            }
 
-    cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(value) ? "block" : "none";
-    });
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.erro) {
+                        alert("CEP não encontrado!");
+                        return;
+                    }
+
+                    document.getElementById("logradouro").value = data.logradouro;
+                    document.getElementById("bairro").value = data.bairro;
+                    document.getElementById("localidade").value = data.localidade + " / " + data.uf;
+                })
+                .catch(() => {
+                    alert("Erro ao consultar CEP!");
+                });
+        });
+    }
+    
+    const searchInput = document.querySelector(".search-box input");
+    const cards = document.querySelectorAll(".funcionario-card");
+
+    if (searchInput && cards.length > 0) {
+        searchInput.addEventListener("input", () => {
+            const value = searchInput.value.toLowerCase();
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                card.style.display = text.includes(value) ? "block" : "none";
+            });
+        });
+    }
 });
