@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaySpeed - Funcionários</title>
+    <title>WaySpeed - Horários</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/funcionarios.css">
+    <link rel="stylesheet" href="css/horarios.css">
 </head>
 <body>
-    <script>checkAuth();</script>
-
     <div class="container">
-
+        
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>WaySpeed</h1>
@@ -38,54 +36,25 @@
             </div>
         </aside>
 
-        <!-- Conteúdo Principal -->
+        
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1><b>Funcionários</b></h1>
+                <h1><b>Horários</b></h1>
             </header>
 
-            <div class="funcionarios-container">
-                
-                <section class="novo-section">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Pesquisar...">
-                    </div>
-                </section>
-
-               
-                <div class="funcionarios-list">
-                    
-                    <div class="funcionario-card">
-                        <div class="funcionario-header">
-                            <h3>Operador</h3>
-                        </div>
-                        <div class="funcionario-info">
-                            <p><strong>Inicio de Rota Norte</strong></p>
-                            <p>N° cracha #1</p>
-                            <p>10:00 - 18:00hrs</p>
-                        </div>
-                    </div>
-
-                    
-                    <div class="funcionario-card rh">
-                        <div class="funcionario-header">
-                            <h3>Operador</h3>
-                        </div>
-                        <div class="funcionario-info">
-                            <p><strong>Inicio de Rota Sul</strong></p>
-                            <p>N° cracha #1</p>
-                            <p>10:00 - 18:00hrs</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="rotas-container">
+                <h2>Rotas Disponíveis</h2>
+                <ul class="rotas-list">
+                    <li><a href="mapasul.php"><i class="fa-solid fa-chevron-right"></i> Rota Sul</a></li>
+                    <li><a href="mapanorte.php"><i class="fa-solid fa-chevron-right"></i> Rota Norte</a></li>
+                </ul>
             </div>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scriptmenu.js"></script>
 </body>
 </html>

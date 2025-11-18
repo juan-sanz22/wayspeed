@@ -46,7 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
     <div class="container">
-        <!-- Menu Lateral -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>WaySpeed</h1>
@@ -54,19 +53,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="horarios.php"><i class="fa-solid fa-clock"></i> Horarios</a></li>
-                    <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i> Monitoramento</a></li>
-                    <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i> Relatórios</a></li>
-                    <li><a href="alertas.php"><i class="fa-solid fa-triangle-exclamation"></i> Alertas</a></li>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                    <li><a href="rotas.php"><i class="fa-solid fa-clock"></i>Rotas</a></li>
+                    <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i>Monitoramento</a></li>
+                    <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
                     <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
                 </ul>
 
                 <div class="divider"></div>
 
                 <ul>
-                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i> Cadastrar</a></li>
-                    <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i> Funcionarios</a></li>
+                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
@@ -80,13 +78,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Cadastro</h1>
+                <h1><b>Cadastro</b></h1>
             </header>
 
             <div class="form-container">
-    <?php if (!empty($msg)) : ?>
-        <p class="msg"><?= $msg ?></p>
-    <?php endif; ?>
+            <?php if (!empty($msg)) : ?>
+                <p class="msg"><?= $msg ?></p>
+            <?php endif; ?>
 
                 <form class="cadastro-form" method="POST" action="cadastro.php">
                     <div class="form-group">
@@ -95,15 +93,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="form-group">
                         <label for="tipo">Cargo</label>
-    <select id="cargo" name="tipo" required>
-        <option value="">Selecione o cargo</option>
-        <option value="Administrador">Administrador</option>
-        <option value="Gerente">Gerente</option>
-        <option value="Supervisor">Supervisor</option>
-        <option value="Tecnico">Técnico</option>
-        <option value="Operador">Operador</option>
-        <option value="Estagiario">Estagiário</option>
-    </select>
+                    <select id="cargo" name="tipo" required>
+                        <option value="">Selecione o cargo</option>
+                        <option value="Gerente">Gerente</option>
+                        <option value="Operador">Operador</option>
+                    </select>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>

@@ -19,19 +19,18 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="horarios.php"><i class="fa-solid fa-clock"></i> Horarios</a></li>
-                    <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i> Monitoramento</a></li>
-                    <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i> Relatórios</a></li>
-                    <li><a href="alertas.php"><i class="fa-solid fa-triangle-exclamation"></i> Alertas</a></li>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                    <li><a href="rotas.php"><i class="fa-solid fa-clock"></i>Rotas</a></li>
+                    <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i>Monitoramento</a></li>
+                    <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
                     <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
                 </ul>
 
                 <div class="divider"></div>
 
                 <ul>
-                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i> Cadastrar</a></li>
-                    <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i> Funcionarios</a></li>
+                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">

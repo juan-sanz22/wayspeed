@@ -17,19 +17,18 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="horarios.php"><i class="fa-solid fa-clock"></i> Horarios</a></li>
-                    <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i> Monitoramento</a></li>
-                    <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i> Relatórios</a></li>
-                    <li><a href="alertas.php"><i class="fa-solid fa-triangle-exclamation"></i> Alertas</a></li>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                    <li><a href="rotas.php"><i class="fa-solid fa-clock"></i>Rotas</a></li>
+                    <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i>Monitoramento</a></li>
+                    <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
                     <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
                 </ul>
 
                 <div class="divider"></div>
 
                 <ul>
-                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i> Cadastrar</a></li>
-                    <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i> Funcionarios</a></li>
+                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
@@ -49,10 +48,7 @@
                 <section class="trens-section">
                     <h2>Trens em Operação</h2>
                     <div class="trens-list">
-                        <div class="trem-item">Trem 1002</div>
-                        <div class="trem-item">Trem 1007</div>
-                        <div class="trem-item">Trem 10010</div>
-                        <div class="trem-item">Trem 10012</div>
+                        <div class="trem-item">Trem 2008</div>
                     </div>
                 </section>
 
@@ -65,7 +61,7 @@
                             <label class="checkbox-container">
                                 <input type="checkbox" disabled>
                                 <span class="checkmark"></span>
-                                <span class="rota-text">Rota 0001 - Concluida</span>
+                                <span class="rota-text">Rota Sul - Em adamento</span>
                                 <span class="rota-horario">07:45</span>
                             </label>
                         </div>
@@ -73,7 +69,7 @@
                             <label class="checkbox-container">
                                 <input type="checkbox" checked disabled>
                                 <span class="checkmark"></span>
-                                <span class="rota-text">Rota 0003 - Concluida</span>
+                                <span class="rota-text">Rota Norte - Concluida</span>
                                 <span class="rota-horario">08:32</span>
                             </label>
                         </div>
@@ -81,7 +77,7 @@
                             <label class="checkbox-container">
                                 <input type="checkbox" checked disabled>
                                 <span class="checkmark"></span>
-                                <span class="rota-text">Rota 0005 - Concluida</span>
+                                <span class="rota-text">Rota Norte - Concluida</span>
                                 <span class="rota-horario">09:09</span>
                             </label>
                         </div>
@@ -89,7 +85,7 @@
                             <label class="checkbox-container">
                                 <input type="checkbox" checked disabled>
                                 <span class="checkmark"></span>
-                                <span class="rota-text">Rota 0006 - Concluida</span>
+                                <span class="rota-text">Rota Norte - Concluida</span>
                                 <span class="rota-horario">09:10</span>
                             </label>
                         </div>
@@ -97,7 +93,7 @@
                             <label class="checkbox-container">
                                 <input type="checkbox" checked disabled>
                                 <span class="checkmark"></span>
-                                <span class="rota-text">Rota 0011 - Concluida</span>
+                                <span class="rota-text">Rota Sul - Concluida</span>
                                 <span class="rota-horario">10:23</span>
                             </label>
                         </div>

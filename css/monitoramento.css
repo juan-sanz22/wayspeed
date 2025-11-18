@@ -16,13 +16,14 @@ body {
     min-height: 100vh;
 }
 
-
 .sidebar {
     width: 250px;
     background-color: #252737;
     color: white;
     transition: all 0.3s ease;
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
     z-index: 100;
     overflow-y: auto;
@@ -82,14 +83,6 @@ body {
     margin: 10px 20px;
 }
 
-.rotas-title {
-    color: #bdc3c7;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 5px 20px;
-}
-
 .sidebar-footer {
     padding: 20px;
     font-size: 0.8rem;
@@ -100,11 +93,11 @@ body {
     width: 100%;
 }
 
-
 .main-content {
     flex: 1;
     transition: all 0.3s ease;
     padding: 20px;
+    margin-left: 250px;
     color: #1ec3f7;
 }
 
@@ -129,25 +122,25 @@ body {
     font-weight: 600;
 }
 
-
 .monitoramento-container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
     gap: 25px;
 }
 
-.status-section,
-.estacoes-section {
+.status-section {
+    grid-column: 1 / 4;
     background-color: #000;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(43, 43, 43, 0.1);
+    color: #fff;
 }
 
-.status-section h2,
-.estacoes-section h2 {
+.status-section h2 {
     font-size: 1.3rem;
     margin-bottom: 20px;
-    color: #fff;
 }
 
 .status-card {
@@ -190,16 +183,31 @@ body {
     color: #fff;
 }
 
+.estacoes-section {
+    background-color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(43, 43, 43, 0.1);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.estacoes-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
 .estacao-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    margin-bottom: 10px;
-    background-color: #000;
+    background-color: #111;
     border-radius: 6px;
-    transition: all 0.2s;
     color: #fff;
+    transition: all 0.2s;
 }
 
 .estacao-card:hover {
@@ -215,11 +223,6 @@ body {
 .estacao-nome {
     font-weight: 500;
     margin-bottom: 5px;
-}
-
-.estacao-tempo {
-    font-size: 0.9rem;
-    color: #fff;
 }
 
 .status-indicador {
@@ -241,10 +244,14 @@ body {
     background-color: rgba(243, 156, 18, 1);
 }
 
-
 @media (max-width: 992px) {
     .monitoramento-container {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .status-section {
+        grid-column: 1;
     }
 }
 

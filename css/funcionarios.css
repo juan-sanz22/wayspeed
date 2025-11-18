@@ -1,3 +1,4 @@
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -15,23 +16,23 @@ body {
     min-height: 100vh;
 }
 
-
 .sidebar {
     width: 250px;
     background-color: #252737;
-    color: #fff;
+    color: white;
     transition: all 0.3s ease;
     position: fixed;
     height: 100vh;
     z-index: 100;
+    overflow-y: auto;
 }
 
 .sidebar-header {
     padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .sidebar-header h1 {
@@ -42,32 +43,30 @@ body {
     display: none;
     background: none;
     border: none;
-    color: #fff;
+    color: white;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
+.sidebar-nav {
+    padding: 15px 0;
+}
+
 .sidebar-nav ul {
     list-style: none;
-    padding: 15px 0;
 }
 
 .sidebar-nav li a {
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    color: #fff;
+    color: white;
     text-decoration: none;
     transition: all 0.2s;
 }
 
 .sidebar-nav li a:hover {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.sidebar-nav li a.active {
-    background-color: rgba(52, 152, 219, 0.2);
-    border-left: 3px solid var(--accent);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-nav li a i {
@@ -76,17 +75,42 @@ body {
     text-align: center;
 }
 
+.divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 10px 20px;
+}
+
+.rotas-title {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 20px;
+}
+
 .sidebar-footer {
     padding: 20px;
     font-size: 0.8rem;
-    color: var(--text-light);
-    opacity: 0.7;
+    color: #bdc3c7;
     text-align: center;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .close-btn {
+        display: block;
+    }
+}
 
 .main-content {
     flex: 1;
@@ -112,14 +136,13 @@ body {
 }
 
 .header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
-    color: #3498db;
+    color: #1ec3f7;
 }
 
-
 .funcionarios-container {
-    background-color: var(--bg-card);
+    background-color: #1E1F26;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -127,13 +150,7 @@ body {
 
 .novo-section {
     padding: 20px;
-    border-bottom: 1px solid var(--border);
-}
-
-.novo-section h2 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--primary);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .search-box {
@@ -155,9 +172,11 @@ body {
 .search-box input {
     width: 100%;
     padding: 10px 15px 10px 40px;
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 20px;
     font-size: 0.9rem;
+    background-color: transparent;
+    color: #fff;
 }
 
 .add-btn {
@@ -194,15 +213,12 @@ body {
     border-radius: 10px;
     padding: 15px;
     transition: all 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .funcionario-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.funcionario-card.rh {
-    border-left: 4px solid var(--rh-color);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 .funcionario-header {
@@ -211,7 +227,7 @@ body {
     align-items: center;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .funcionario-header h3 {
@@ -229,36 +245,22 @@ body {
 
 .funcionario-info {
     font-size: 0.9rem;
+    color: #ccc;
 }
 
 .funcionario-info p:first-child {
     font-weight: 500;
     margin-bottom: 5px;
+    color: #fff;
 }
 
-
 @media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%);
-        width: 280px;
-    }
-    
-    .sidebar.active {
-        transform: translateX(0);
-    }
-    
-    .close-btn {
-        display: block;
-    }
-    
     .main-content {
         margin-left: 0;
     }
-    
     .menu-btn {
         display: block;
     }
-    
     .funcionarios-list {
         grid-template-columns: 1fr;
     }
