@@ -49,3 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!valido) e.preventDefault();
   });
 });
+
+const searchInput = document.querySelector(".search-box input");
+const cards = document.querySelectorAll(".funcionario-card");
+
+searchInput.addEventListener("input", () => {
+    const value = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(value) ? "block" : "none";
+    });
+});
