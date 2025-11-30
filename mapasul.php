@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id']) || empty($_SESSION['usuario_id'])) {
+    header("Location: index.php");
+    exit();
+}
+
+require_once "conexao.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,7 +40,10 @@
                 <div class="divider"></div>
 
                 <ul>
-                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <?php if ($_SESSION['cargo'] === 'Gerente'): ?>
+                        <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <?php endif; ?>
+
                     <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
                 </ul>
             </nav>

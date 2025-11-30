@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['usuario_id']) || $_SESSION['cargo'] !== 'Gerente') {
+    header("Location: dashboard.php");
+    exit();
+}
+
 require 'conexao.php';
 
 $msg = '';
@@ -33,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+
  
  <!DOCTYPE html>
 <html lang="pt-br">

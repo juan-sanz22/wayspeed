@@ -254,6 +254,25 @@ body {
     color: #fff;
 }
 
+.delete-btn {
+    margin-top: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+
 @media (max-width: 768px) {
     .main-content {
         margin-left: 0;

@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id']) || empty($_SESSION['usuario_id'])) {
+    header("Location: index.php");
+    exit();
+}
+
+require_once "conexao.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,7 +38,10 @@
                 <div class="divider"></div>
 
                 <ul>
-                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <?php if ($_SESSION['cargo'] === 'Gerente'): ?>
+                        <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <?php endif; ?>
+
                     <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
                 </ul>
             </nav>
@@ -59,27 +73,19 @@
                     
                     <div class="notificacao-item unread">
                         <div class="notificacao-header">
-                            <span class="setor">Setor de Administração</span>
+                            <span class="setor">Setor de Operacao</span>
                             <span class="time">10:30 AM</span>
                         </div>
-                        <h3 class="notificacao-title">Mensagem Teste 1</h3>
-                        <div class="notificacao-content">
-                            <p><strong>Setor de Administração</strong></p>
-                            <p><strong>Mensagem Teste 1</strong></p>
-                        </div>
+                        <h3 class="notificacao-title">Rota sul iniciada com sucesso!</h3>
                     </div>
 
                     
                     <div class="notificacao-item unread">
                         <div class="notificacao-header">
-                            <span class="setor">Setor de Administração</span>
+                            <span class="setor">Setor de Seguraca</span>
                             <span class="time">11:45 AM</span>
                         </div>
-                        <h3 class="notificacao-title">Mensagem Teste 1</h3>
-                        <div class="notificacao-content">
-                            <p><strong>Setor de Administração</strong></p>
-                            <p><strong>Mensagem Teste 1</strong></p>
-                        </div>
+                        <h3 class="notificacao-title">Iluminacao ativada</h3>
                     </div>
                 </div>
             </div>
