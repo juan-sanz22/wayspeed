@@ -22,35 +22,37 @@ $funcionarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/funcionarios.css">
 </head>
 <body>
-
 <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>WaySpeed</h1>
+                <button class="close-btn">&times;</button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                    <li><a href="rotas.php"><i class="fa-solid fa-clock"></i>Rotas</a></li>
+                    <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i>Monitoramento</a></li>
+                    <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
+                    <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
+                </ul>
+                <div class="divider"></div>
+                <ul>
+                    <?php if ($_SESSION['cargo'] === 'Gerente'): ?>
+                        <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <?php endif; ?>
 
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <h1>WaySpeed</h1>
-            <button class="close-btn">&times;</button>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>Dashboard</a></li>
-                <li><a href="rotas.php"><i class="fa-solid fa-clock"></i>Rotas</a></li>
-                <li><a href="monitoramento.php"><i class="fa-solid fa-desktop"></i>Monitoramento</a></li>
-                <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
-                <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <ul>
-                <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
-                <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionários</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <p>&copy; 2025 WaySpeed. Inc.</p>
-        </div>
-    </aside>
-
+                    <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
+                </ul>
+                <div class="divider"></div>
+                <ul>
+                   <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2025 WaySpeed. Inc.</p>
+            </div>
+        </aside>
     <main class="main-content">
         <header class="header">
             <button class="menu-btn">
@@ -58,18 +60,14 @@ $funcionarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </button>
             <h1><b>Funcionários</b></h1>
         </header>
-
         <div class="funcionarios-container">
-
             <section class="novo-section">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="Pesquisar..." id="pesquisar">
                 </div>
             </section>
-
             <div class="funcionarios-list" id="listaFuncionarios">
-
                 <?php if (count($funcionarios) > 0): ?>
                     <?php foreach ($funcionarios as $f): ?>
                         <div class="funcionario-card">
@@ -82,9 +80,10 @@ $funcionarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <p>Email: <?= htmlspecialchars($f["email"]) ?></p>
                             </div>
 
-                            <?php if ($_SESSION["cargo"] === "Gerente"): ?>
+                            <!-- Exibir o botão de excluir somente para Operadores -->
+                            <?php if ($f["cargo"] === "Operador"): ?>
                                 <form action="excluirFuncionario.php" method="POST" class="delete-form" 
-                                      onsubmit="return confirm('Tem certeza que deseja excluir este funcionário?');">
+                                    onsubmit="return confirm('Tem certeza que deseja excluir este funcionário?');">
                                     <input type="hidden" name="usuario_id" value="<?= $f['usuario_id'] ?>">
                                     <button type="submit" class="delete-btn">
                                         <i class="fa-solid fa-trash"></i> Excluir
@@ -97,12 +96,10 @@ $funcionarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php else: ?>
                     <p>Nenhum funcionário encontrado.</p>
                 <?php endif; ?>
-
             </div>
         </div>
     </main>
 </div>
-
 <script src="scriptmenu.js"></script>
 </body>
 </html>

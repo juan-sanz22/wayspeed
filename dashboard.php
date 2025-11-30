@@ -9,10 +9,8 @@ if (!isset($_SESSION['usuario_id']) || empty($_SESSION['usuario_id'])) {
 require_once "conexao.php";
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +18,6 @@ require_once "conexao.php";
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
-
 <body>
     <div class="container">
         <aside class="sidebar">
@@ -36,22 +33,22 @@ require_once "conexao.php";
                     <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
                     <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
                 </ul>
-
                 <div class="divider"></div>
-
                 <ul>
                     <?php if ($_SESSION['cargo'] === 'Gerente'): ?>
                         <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
                     <?php endif; ?>
-
                     <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
+                </ul>
+                <div class="divider"></div>
+                <ul>
+                    <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
                 <p>&copy; 2025 WaySpeed. Inc.</p>
             </div>
         </aside>
-
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">
@@ -59,10 +56,7 @@ require_once "conexao.php";
                 </button>
                 <h1><b>Dashboard</b></h1>
             </header>
-
             <div class="dashboard-grid">
-
-                <!-- NOVA SESSÃO: MONITORAMENTO DAS ROTAS -->
                 <section class="card monitoramento-rotas">
                     <h2>Monitoramento</h2>
                     <div class="stats-container" style="display: flex; flex-direction: column; gap: 20px;">
@@ -76,8 +70,6 @@ require_once "conexao.php";
                         </div>
                     </div>
                 </section>
-
-                <!-- RELATÓRIO (MANTIDO) -->
                 <section class="card relatorio">
                     <h2>Relatórios</h2>
 
@@ -93,9 +85,6 @@ require_once "conexao.php";
                         </div>
                     </div>
                 </section>
-
-
-                <!-- HORÁRIOS (MANTIDO) -->
                 <section class="card horarios">
                     <h2>Rotas</h2>
                     <div class="horarios-content">
@@ -104,8 +93,6 @@ require_once "conexao.php";
                         <div class="rota">Norte / Sul</div>
                     </div>
                 </section>
-
-                <!-- MONITORAMENTO GERAL (AJUSTADO) -->
                 <section class="card monitoramento">
                     <h2>Monitoramento</h2>
                     <div class="stats-container">
@@ -126,7 +113,6 @@ require_once "conexao.php";
             </div>
         </main>
     </div>
-
     <script src="scriptmenu.js"></script>
 </body>
 </html>

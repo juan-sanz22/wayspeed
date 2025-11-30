@@ -16,21 +16,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'] ?? '';
     $senha = $_POST['senha'] ?? '';
     $cargo = $_POST['tipo'] ?? '';
+    $cep = $_POST['cep'] ?? '';
+    $ncasa = $_POST['ncasa'] ?? '';
 
-    if ($username && $email && $senha && $cargo) {
+    if ($username && $email && $senha && $cargo && $cep && $ncasa) {
+
         $sql_check = "SELECT COUNT(*) FROM usuarios WHERE email = ?";
         $stmt_check = $pdo->prepare($sql_check);
         $stmt_check->execute([$email]);
-        $existe = $stmt_check->fetchColumn();
 
-        if ($existe > 0) {
+        if ($stmt_check->fetchColumn() > 0) {
             $msg = "Este e-mail já está cadastrado!";
             $msg_class = "error";
         } else {
             $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO usuarios (nome, email, senha, cargo) VALUES (?, ?, ?, ?)";
+
+            $sql = "INSERT INTO usuarios (nome, email, senha, cargo, cep, ncasa)
+                    VALUES (?, ?, ?, ?, ?, ?)";
+
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$username, $email, $senha_hash, $cargo]);
+            $stmt->execute([$username, $email, $senha_hash, $cargo, $cep, $ncasa]);
+
             $msg = "Cadastro adicionado com sucesso!";
             $msg_class = "success";
         }
@@ -41,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
- 
  <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
-
     <div class="container">
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -67,20 +71,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
                     <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
                 </ul>
-
                 <div class="divider"></div>
-
                 <ul>
-                    <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <?php if ($_SESSION['cargo'] === 'Gerente'): ?>
+                        <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
+                    <?php endif; ?>
+
                     <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
+                </ul>
+                <div class="divider"></div>
+                <ul>
+                   <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
                 <p>&copy; 2025 WaySpeed. Inc.</p>
             </div>
         </aside>
-
-        
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">
@@ -88,12 +95,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </button>
                 <h1><b>Cadastro</b></h1>
             </header>
-
             <div class="form-container">
             <?php if (!empty($msg)) : ?>
                 <p class="msg"><?= $msg ?></p>
             <?php endif; ?>
-
                 <form class="cadastro-form" method="POST" action="cadastro.php">
                     <div class="form-group">
                         <label for="username">Nome de usuário</label>
@@ -127,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <br>
                     <div class="form-group">
                         <label for="confirm-cep">CEP</label>
-                        <input type="cep" id="confirm-cep" required>
+                        <input type="cep" id="confirm-cep" name="cep" required>
                     </div>
                     <div class="form-group">
                         <label for="logradouro">Logradouro / Nome</label>
@@ -143,14 +148,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="form-group">
                         <label for="numero">Número</label>
-                        <input type="number" id="numero" required>
+                        <input type="number" id="numero" name="ncasa" required>
                     </div>
                     <button type="submit" class="submit-btn">Cadastrar</button>
                 </form>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -20,7 +20,6 @@ require_once "conexao.php";
 </head>
 <body>
     <div class="container">
-        
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>WaySpeed</h1>
@@ -34,9 +33,7 @@ require_once "conexao.php";
                     <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
                     <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
                 </ul>
-
                 <div class="divider"></div>
-
                 <ul>
                     <?php if ($_SESSION['cargo'] === 'Gerente'): ?>
                         <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
@@ -44,13 +41,15 @@ require_once "conexao.php";
 
                     <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
                 </ul>
+                <div class="divider"></div>
+                <ul>
+                   <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                </ul>
             </nav>
             <div class="sidebar-footer">
                 <p>&copy; 2025 WaySpeed. Inc.</p>
             </div>
         </aside>
-
-        
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">
@@ -58,7 +57,6 @@ require_once "conexao.php";
                 </button>
                 <h1><b>Monitoramento</b></h1>
             </header>
-
             <div class="monitoramento-container">
                 <section class="status-section">
                     <h2>Status Rotas</h2>
@@ -73,7 +71,6 @@ require_once "conexao.php";
                         </div>
                     </div>
                 </section>
-
                 <section class="estacoes-section">
                     <h2>Sensores de Presenças</h2>
                     <div class="estacao-card">
@@ -134,7 +131,6 @@ require_once "conexao.php";
             </div>
         </main>
     </div>
-
     <script src="scriptmenu.js"></script>
 </body>
 </html>

@@ -20,7 +20,6 @@ require_once "conexao.php";
 </head>
 <body>
     <div class="container">
-        
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>WaySpeed</h1>
@@ -34,23 +33,22 @@ require_once "conexao.php";
                     <li><a href="relatorio.php"><i class="fa-solid fa-receipt"></i>Relatórios</a></li>
                     <li><a href="notificacoes.php"><i class="fas fa-bell"></i> Notificações</a></li>
                 </ul>
-
                 <div class="divider"></div>
-
                 <ul>
                     <?php if ($_SESSION['cargo'] === 'Gerente'): ?>
                         <li><a href="cadastro.php"><i class="fa-solid fa-user-plus"></i>Cadastrar</a></li>
                     <?php endif; ?>
-
                     <li><a href="funcionarios.php"><i class="fa-solid fa-user"></i>Funcionarios</a></li>
+                </ul>
+                <div class="divider"></div>
+                <ul>
+                   <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
                 <p>&copy; 2025 WaySpeed. Inc.</p>
             </div>
         </aside>
-
-        
         <main class="main-content">
             <header class="header">
                 <button class="menu-btn">
@@ -58,19 +56,14 @@ require_once "conexao.php";
                 </button>
                 <h1><b>Notificações</b></h1>
             </header>
-
             <div class="notificacoes-container">
-                
                 <div class="notificacoes-header">
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
                         <input type="text" placeholder="Pesquisar...">
                     </div>
                 </div>
-
-                
                 <div class="notificacoes-list">
-                    
                     <div class="notificacao-item unread">
                         <div class="notificacao-header">
                             <span class="setor">Setor de Operacao</span>
@@ -78,8 +71,6 @@ require_once "conexao.php";
                         </div>
                         <h3 class="notificacao-title">Rota sul iniciada com sucesso!</h3>
                     </div>
-
-                    
                     <div class="notificacao-item unread">
                         <div class="notificacao-header">
                             <span class="setor">Setor de Seguraca</span>
@@ -91,7 +82,6 @@ require_once "conexao.php";
             </div>
         </main>
     </div>
-
     <script src="scriptmenu.js"></script>
 </body>
 </html>
