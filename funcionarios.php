@@ -81,7 +81,7 @@ $funcionarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             </div>
 
                             <!-- Exibir o botão de excluir somente para Operadores -->
-                            <?php if ($f["cargo"] === "Operador"): ?>
+                            <?php if ($_SESSION['cargo'] === 'Gerente' && $f["cargo"] === "Operador"): ?>
                                 <form action="excluirFuncionario.php" method="POST" class="delete-form" 
                                     onsubmit="return confirm('Tem certeza que deseja excluir este funcionário?');">
                                     <input type="hidden" name="usuario_id" value="<?= $f['usuario_id'] ?>">
